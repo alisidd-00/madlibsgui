@@ -1,0 +1,82 @@
+from tkinter import *
+
+
+class MyWindow():
+    def __init__(self, win):
+        self.lbl1 = Label(win, text='Enter season')
+        self.lbl2 = Label(win, text='Enter Color')
+        self.lbl3 = Label(win, text='Enter Person')
+        self.lbl4 = Label(win, text='Enter Food')
+        self.lbl5 = Label(win, text='Enter Sport')
+
+        self.t1 = Entry()
+        self.t2 = Entry()
+        self.t3 = Entry()
+        self.t4 = Entry()
+        self.t5 = Entry()
+        self.t6 = Entry(width=500)
+
+        self.lbl1.place(x=100, y=50)
+        self.t1.place(x=200, y=50)
+        self.lbl2.place(x=100, y=100)
+        self.t2.place(x=200, y=100)
+        self.lbl3.place(x=100, y=150)
+        self.t3.place(x=200, y=150)
+        self.lbl4.place(x=100, y=200)
+        self.t4.place(x=200, y=200)
+        self.lbl5.place(x=100, y=250)
+        self.t5.place(x=200, y=250)
+        self.t6.place(x=200, y=400)
+
+        submit = Button(win, text="Click for Story", font='arial 16', command=self.add, bg='blue', fg='orange')
+        submit.place(x=200, y=300)
+
+    def add(self):
+        str1 = str(self.t1.get())
+        str2 = str(self.t2.get())
+        str3 = str(self.t3.get())
+        str4 = str(self.t4.get())
+        str5 = str(self.t5.get())
+
+        result = "It was a cold " + " " + str1 + " " + "day. The sky was " + str2 + "." + " " + str3 + " was eating"+ " "+ str4 + " The kids were playing " + str5
+        self.t6.insert(END, str(result))
+
+class MyWindow():
+    def __init__(self, win):
+        self.lbl1 = Label(win, text='Enter season')
+        self.lbl2 = Label(win, text='Enter Color')
+        self.lbl3 = Label(win, text='Enter Person')
+        self.lbl4 = Label(win, text='Enter Food')
+        self.lbl5 = Label(win, text='Enter Sport')
+
+        self.t1 = Entry()
+        self.t2 = Entry()
+        self.t3 = Entry()
+        self.t4 = Entry()
+        self.t5 = Entry()
+        self.t6 = Entry(width=500)
+
+        self.lbl1.place(x=100, y=50)
+        self.t1.place(x=200, y=50)
+        self.lbl2.place(x=100, y=100)
+        self.t2.place(x=200, y=100)
+        self.lbl3.place(x=100, y=150)
+        self.t3.place(x=200, y=150)
+        self.lbl4.place(x=100, y=200)
+        self.t4.place(x=200, y=200)
+        self.lbl5.place(x=100, y=250)
+        self.t5.place(x=200, y=250)
+        self.t6.place(x=200, y=400)
+
+        submit = Button(win, text="Click for Story", font='arial 16', command=self.add, bg='blue', fg='orange')
+        submit.place(x=200, y=300)
+
+window = Tk()
+window.title('MADLIBS BY MUHAMMAD ALI SIDDIQ')
+window.configure(width=100, height=100)
+window.configure(bg='light blue')
+label1 = Label(window, text="MAD LIBS GAME", fg="red", bg="blue", font="arial 24")
+label1.grid(row=0, column=6)
+mywin = MyWindow(window)
+
+window.mainloop()
